@@ -84,13 +84,17 @@
             <version>1.18.8</version>
         </dependency>
         <!-- Mandatory dependencies for using Spock -->
-
         <dependency>
+            <groupId>org.spockframework</groupId>
+            <artifactId>spock-core</artifactId>
+            <version>1.3-groovy-2.5</version>
+        </dependency>
+        <!--<dependency>
             <groupId>com.github.spockframework.spock</groupId>
             <artifactId>spock-core</artifactId>
             <version>96093b823d5cd861d2757e51c126127794cd57fe</version>
             <scope>test</scope>
-        </dependency>
+        </dependency>-->
         <!-- Optional dependencies for using Spock -->
         <dependency> <!-- use a specific Groovy version rather than the one specified by spock-core -->
             <groupId>org.codehaus.groovy</groupId>
@@ -116,7 +120,18 @@
             <version>1.3</version>
             <scope>test</scope>
         </dependency>
-
+        <dependency>
+            <groupId>com.github.starnowski.bmunit.extension</groupId>
+            <artifactId>junit4-rule</artifactId>
+            <version>1.0.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.starnowski.bmunit.extension</groupId>
+            <artifactId>utils</artifactId>
+            <version>1.0.1</version>
+            <scope>test</scope>
+        </dependency>
 
     </dependencies>
     <build>
@@ -180,5 +195,24 @@
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
         </repository>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>bintray-starnowski-bmunit-extension</id>
+            <name>bintray</name>
+            <url>https://dl.bintray.com/starnowski/bmunit-extension</url>
+        </repository>
     </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>bintray-starnowski-bmunit-extension</id>
+            <name>bintray-plugins</name>
+            <url>https://dl.bintray.com/starnowski/bmunit-extension</url>
+        </pluginRepository>
+    </pluginRepositories>
 </project>
